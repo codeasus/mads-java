@@ -1,7 +1,9 @@
 package codeasus.projects;
 
+import codeasus.projects.hackerrank.EasySolutions;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Hello and welcome!");
+        EasySolutions.outputFormatting();
     }
 }
