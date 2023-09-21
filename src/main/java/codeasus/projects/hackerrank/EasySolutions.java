@@ -3,7 +3,6 @@ package codeasus.projects.hackerrank;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class EasySolutions {
@@ -85,5 +84,22 @@ public class EasySolutions {
                 logException(ioException.getMessage());
             }
         }
+    }
+
+    public static void loops2() {
+        Scanner scanner = new Scanner(System.in);
+        int lineCount = scanner.nextInt();
+        while (lineCount-- != 0) {
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            int n = scanner.nextInt();
+            int total = a;
+            for (int i = 0; i < n; i++) {
+                total += (int) (b * Math.pow(2, i));
+                System.out.printf("%d ", total);
+            }
+            System.out.println();
+        }
+        scanner.close();
     }
 }

@@ -4,6 +4,6 @@ import codeasus.projects.hackerrank.EasySolutions;
 
 public class Main {
     public static void main(String[] args) {
-        EasySolutions.outputFormatting();
+        EasySolutions.loops2();
     }
 }
