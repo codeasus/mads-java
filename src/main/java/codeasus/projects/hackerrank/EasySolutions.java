@@ -86,6 +86,7 @@ public class EasySolutions {
         }
     }
 
+    //    https://www.hackerrank.com/challenges/java-stdin-stdout
     public static void loops2() {
         Scanner scanner = new Scanner(System.in);
         int lineCount = scanner.nextInt();
@@ -99,6 +100,34 @@ public class EasySolutions {
                 System.out.printf("%d ", total);
             }
             System.out.println();
+        }
+        scanner.close();
+    }
+
+    //    https://www.hackerrank.com/challenges/java-datatypes
+    public static void javaDataTypes() {
+        Scanner scanner = new Scanner(System.in);
+        int lineCount = scanner.nextInt();
+        scanner.nextLine();
+        while (lineCount-- != 0) {
+            String strNumber = scanner.nextLine();
+            try {
+                long number = Long.parseLong(strNumber);
+                System.out.printf("%d can be fitted in: \n", number);
+                if (number >= Byte.MIN_VALUE && number <= Byte.MAX_VALUE) {
+                    System.out.println("* byte\n* short\n* int\n* long");
+                }
+                else if (number >= Short.MIN_VALUE && number <= Short.MAX_VALUE) {
+                    System.out.println("* short\n* int\n* long");
+                }
+                else if (number >= Integer.MIN_VALUE && number <= Integer.MAX_VALUE) {
+                    System.out.println("* int\n* long");
+                } else {
+                    System.out.println("* long");
+                }
+            } catch (NumberFormatException e) {
+                System.out.printf("%s can't be fitted anywhere.\n", strNumber);
+            }
         }
         scanner.close();
     }
