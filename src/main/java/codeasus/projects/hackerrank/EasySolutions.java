@@ -139,4 +139,22 @@ public class EasySolutions {
         }
         scanner.close();
     }
+
+    private static int area(int breadth, int height) throws Exception {
+        if (breadth < 0 || height < 0) {
+            throw new Exception();
+        }
+        return breadth * height;
+    }
+
+    public void staticInitializer() {
+        Scanner scanner = new Scanner(System.in);
+        int breadth = scanner.nextInt();
+        int height = scanner.nextInt();
+        try {
+            System.out.println(area(breadth, height));
+        } catch (Exception e) {
+            System.out.printf("%s\n", e);
+        }
+    }
 }
