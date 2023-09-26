@@ -105,7 +105,7 @@ public class EasySolutions {
     }
 
     //    https://www.hackerrank.com/challenges/java-datatypes
-    public static void javaDataTypes() {
+    public static void dataTypes() {
         Scanner scanner = new Scanner(System.in);
         int lineCount = scanner.nextInt();
         scanner.nextLine();
@@ -116,11 +116,9 @@ public class EasySolutions {
                 System.out.printf("%d can be fitted in: \n", number);
                 if (number >= Byte.MIN_VALUE && number <= Byte.MAX_VALUE) {
                     System.out.println("* byte\n* short\n* int\n* long");
-                }
-                else if (number >= Short.MIN_VALUE && number <= Short.MAX_VALUE) {
+                } else if (number >= Short.MIN_VALUE && number <= Short.MAX_VALUE) {
                     System.out.println("* short\n* int\n* long");
-                }
-                else if (number >= Integer.MIN_VALUE && number <= Integer.MAX_VALUE) {
+                } else if (number >= Integer.MIN_VALUE && number <= Integer.MAX_VALUE) {
                     System.out.println("* int\n* long");
                 } else {
                     System.out.println("* long");
@@ -128,6 +126,16 @@ public class EasySolutions {
             } catch (NumberFormatException e) {
                 System.out.printf("%s can't be fitted anywhere.\n", strNumber);
             }
+        }
+        scanner.close();
+    }
+
+    //    https://www.hackerrank.com/challenges/java-end-of-file
+    public static void endOfFile() {
+        Scanner scanner = new Scanner(System.in);
+        int counter = 1;
+        while (scanner.hasNextLine()) {
+            System.out.printf("%d %s\n", counter++, scanner.nextLine());
         }
         scanner.close();
     }
